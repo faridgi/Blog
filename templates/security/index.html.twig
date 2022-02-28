@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SecurityController!{% endblock %}
+
+{% block body %}
+
+
+<div class="container mt-3">
+    <h1>{{ controller_name }} ✅</h1>
+    
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-4">{{ form_row(form.username, {'label':"Nom d'utilisateur : ", 'attr': {
+            'placeholder':"Votre nom d'utilisateur..."}}) }}</div>
+        <div class="col-md-4">{{ form_row(form.firstname, {'label':"Prénom : ", 'attr': {
+            'placeholder':"Votre Prénom ..."}}) }}</div>
+        <div class="col-md-4">{{ form_row(form.lastname, {'label':"Nom : ", 'attr': {
+            'placeholder':"Votre Nom..."}}) }}</div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">{{ form_row(form.email, {'label':"Email : ", 'attr': {
+            'placeholder':"Votre email..."}}) }}</div>
+        <div class="col-12">{{ form_row(form.password, {'label':"Mot de passe : ", 'attr': {
+            'placeholder':"Votre mot de passe..."}}) }}</div>
+        <div class="col-12">{{ form_row(form.passwordConfirm, {'label':"Confirmer votre mot de passe : ", 'attr': {
+            'placeholder':"Confirmation de votre mot de passe..."}}) }}</div>
+    </div>
+  
+        <button type="submit" class="btn btn-success mt-3" style="width: 150px;">S'inscrire</button> 
+    {{ form_end(form) }}
+
+</div>
+{% endblock %}
